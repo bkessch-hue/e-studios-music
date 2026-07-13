@@ -5,7 +5,7 @@
   text-align: center;
   position: relative;
   z-index: 1;
-  background: radial-gradient(ellipse at 50% 30%, rgba(37,99,235,0.2) 0%, transparent 60%);
+  background: radial-gradient(ellipse at 50% 30%, rgba(176,112,80,0.15) 0%, transparent 60%);
 }
 
 .lessons-hero h1 {
@@ -38,7 +38,7 @@
 
 .instrument-card {
   background: var(--dark-card);
-  border: 1px solid rgba(59,130,246,0.1);
+  border: 1px solid rgba(176,112,80,0.1);
   border-radius: var(--radius);
   padding: 32px 20px;
   text-align: center;
@@ -49,25 +49,25 @@
 .instrument-card:hover,
 .instrument-card.selected {
   transform: translateY(-6px);
-  border-color: var(--blue-500);
-  box-shadow: 0 8px 30px rgba(59,130,246,0.2);
+  border-color: var(--brown-500);
+  box-shadow: 0 8px 30px rgba(176,112,80,0.2);
 }
 
 .instrument-card.selected {
-  background: rgba(59,130,246,0.1);
+  background: rgba(176,112,80,0.1);
 }
 
 .instrument-icon {
   width: 64px;
   height: 64px;
   margin: 0 auto 16px;
-  color: var(--blue-400);
+  color: var(--brown-400);
   transition: color 0.3s;
 }
 
 .instrument-card:hover .instrument-icon,
 .instrument-card.selected .instrument-icon {
-  color: var(--blue-300);
+  color: var(--brown-300);
 }
 
 .instrument-icon svg {
@@ -91,7 +91,7 @@
   max-width: 720px;
   margin: 0 auto;
   background: var(--dark-card);
-  border: 1px solid rgba(59,130,246,0.1);
+  border: 1px solid rgba(176,112,80,0.1);
   border-radius: var(--radius);
   padding: 40px;
 }
@@ -129,8 +129,8 @@
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
-  border-color: var(--blue-500);
-  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+  border-color: var(--brown-500);
+  box-shadow: 0 0 0 3px rgba(176,112,80,0.15);
 }
 
 .form-group input::placeholder,
@@ -189,7 +189,7 @@
 
 .pricing-card {
   background: var(--dark-card);
-  border: 1px solid rgba(59,130,246,0.1);
+  border: 1px solid rgba(176,112,80,0.1);
   border-radius: var(--radius);
   padding: 40px 32px;
   text-align: center;
@@ -200,8 +200,8 @@
 .pricing-card:hover { transform: translateY(-6px); }
 
 .pricing-card.featured {
-  border-color: var(--blue-500);
-  background: rgba(59,130,246,0.05);
+  border-color: var(--brown-500);
+  background: rgba(176,112,80,0.05);
 }
 
 .featured-badge {
@@ -257,7 +257,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--blue-500);
+  background: var(--brown-500);
   flex-shrink: 0;
 }
 
