@@ -1,6 +1,6 @@
+redirectsOrigin = "config"
 plugins = []
 headers = []
-redirects = []
 
 [functions]
 
@@ -8,9 +8,12 @@ redirects = []
 
 [build]
 publish = "/Users/emanuelcham/Documents/New OpenCode Project/e-studios"
-publishOrigin = "default"
+publishOrigin = "config"
+commandOrigin = "config"
+command = "echo 'Static site - no build needed'"
 
 [build.environment]
+NODE_VERSION = "18"
 
 [build.processing]
 
@@ -23,3 +26,15 @@ publishOrigin = "default"
 [build.processing.js]
 
 [build.services]
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200.0
+force = false
+
+[redirects.query]
+
+[redirects.conditions]
+
+[redirects.headers]
