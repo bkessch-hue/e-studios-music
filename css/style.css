@@ -350,12 +350,14 @@ ul { list-style: none; }
   z-index: 1;
 }
 
-.section-dark {
+.section-dark,
+.section-concert {
   background: var(--dark-surface);
   position: relative;
 }
 
-.section-dark::before {
+.section-dark::before,
+.section-concert::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -364,7 +366,8 @@ ul { list-style: none; }
   z-index: 0;
 }
 
-.section-dark > * {
+.section-dark > *,
+.section-concert > * {
   position: relative;
   z-index: 1;
 }
