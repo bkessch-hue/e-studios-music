@@ -21,24 +21,72 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Track play button interaction
-document.querySelectorAll('.track-play').forEach(btn => {
-  btn.addEventListener('click', function () {
-    const icon = this.querySelector('svg');
-    const isPlaying = this.classList.contains('playing');
+// Audio player
+let currentAudio = null;
+let currentBtn = null;
 
-    // Reset all other buttons
-    document.querySelectorAll('.track-play').forEach(b => {
-      b.classList.remove('playing');
-      b.querySelector('svg').innerHTML = '<path d="M8 5v14l11-7z"/>';
-    });
+function togglePlay(audioId, btn) {
+  const audio = document.getElementById(audioId);
+  if (!audio) return;
 
-    if (!isPlaying) {
-      this.classList.add('playing');
-      icon.innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+  // If clicking the same track that's playing, pause it
+  if (currentAudio === audio && !audio.paused) {
+    audio.pause();
+    btn.classList.remove('playing');
+    btn.querySelector('svg').innerHTML = '<path d="M8 5v14l11-7z"/>';
+    return;
+  }
+
+  // Stop any currently playing track
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+    if (currentBtn) {
+      currentBtn.classList.remove('playing');
+      currentBtn.querySelector('svg').innerHTML = '<path d="M8 5v14l11-7z"/>';
+    }
+  }
+
+  // Play the new track
+  audio.play();
+  btn.classList.add('playing');
+  btn.querySelector('svg').innerHTML = '<path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>';
+  currentAudio = audio;
+  currentBtn = btn;
+
+  // When track ends, reset button
+  audio.onended = () => {
+    btn.classList.remove('playing');
+    btn.querySelector('svg').innerHTML = '<path d="M8 5v14l11-7z"/>';
+    currentAudio = null;
+    currentBtn = null;
+  };
+}
+
+// Load audio durations
+document.querySelectorAll('audio').forEach(audio => {
+  const id = audio.id;
+  const num = id.replace('audio', '');
+  const durationEl = document.getElementById('duration' + num);
+
+  audio.addEventListener('loadedmetadata', () => {
+    if (durationEl) {
+      durationEl.textContent = formatTime(audio.duration);
+    }
+  });
+
+  audio.addEventListener('timeupdate', () => {
+    if (durationEl) {
+      durationEl.textContent = formatTime(audio.currentTime);
     }
   });
 });
+
+function formatTime(seconds) {
+  const m = Math.floor(seconds / 60);
+  const s = Math.floor(seconds % 60);
+  return m + ':' + (s < 10 ? '0' : '') + s;
+}
 
 // Smooth reveal on scroll
 const observerOptions = { threshold: 0.1 };

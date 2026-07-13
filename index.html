@@ -114,13 +114,17 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
           </div>
           <div class="track-details">
-            <h3>Midnight Groove</h3>
-            <p>E-Studios ft. Various Artists</p>
+            <h3>CHR RB</h3>
+            <p>E-Studios Original</p>
           </div>
-          <div class="track-duration">3:42</div>
-          <button class="track-play" aria-label="Play track">
+          <audio id="audio1" src="music/CHR%20RB.mp3"></audio>
+          <div class="track-duration" id="duration1">0:00</div>
+          <button class="track-play" aria-label="Play track" onclick="togglePlay('audio1', this)">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
           </button>
+          <a href="music/CHR%20RB.mp3" download class="track-download" aria-label="Download track">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          </a>
         </div>
         <div class="track-item">
           <div class="track-number">02</div>
@@ -128,55 +132,17 @@
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
           </div>
           <div class="track-details">
-            <h3>Blue Horizon</h3>
-            <p>E-Studios Original</p>
+            <h3>MainStage Session</h3>
+            <p>E-Studios Live Recording</p>
           </div>
-          <div class="track-duration">4:15</div>
-          <button class="track-play" aria-label="Play track">
+          <audio id="audio2" src="music/MainStage%20Session.wav"></audio>
+          <div class="track-duration" id="duration2">0:00</div>
+          <button class="track-play" aria-label="Play track" onclick="togglePlay('audio2', this)">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
           </button>
-        </div>
-        <div class="track-item">
-          <div class="track-number">03</div>
-          <div class="track-art">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
-          </div>
-          <div class="track-details">
-            <h3>Electric Dreams</h3>
-            <p>E-Studios Remix</p>
-          </div>
-          <div class="track-duration">5:01</div>
-          <button class="track-play" aria-label="Play track">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </button>
-        </div>
-        <div class="track-item">
-          <div class="track-number">04</div>
-          <div class="track-art">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
-          </div>
-          <div class="track-details">
-            <h3>Soulful Nights</h3>
-            <p>E-Studios x Guest Artist</p>
-          </div>
-          <div class="track-duration">3:58</div>
-          <button class="track-play" aria-label="Play track">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </button>
-        </div>
-        <div class="track-item">
-          <div class="track-number">05</div>
-          <div class="track-art">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
-          </div>
-          <div class="track-details">
-            <h3>Rhythm & Flow</h3>
-            <p>E-Studios Beat Tape Vol. 1</p>
-          </div>
-          <div class="track-duration">6:22</div>
-          <button class="track-play" aria-label="Play track">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-          </button>
+          <a href="music/MainStage%20Session.wav" download class="track-download" aria-label="Download track">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          </a>
         </div>
       </div>
     </div>
