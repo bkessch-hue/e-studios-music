@@ -325,6 +325,15 @@ ul { list-style: none; }
   margin-bottom: 12px;
 }
 
+h1 {
+  color: white;
+  text-shadow:
+    0 0 5px #ff00ff,
+    0 0 10px #ff00ff,
+    0 0 20px #ff00ff,
+    0 0 40px #ff00ff;
+}
+
 .section-header p {
   color: var(--gray-400);
   font-size: 1.1rem;
