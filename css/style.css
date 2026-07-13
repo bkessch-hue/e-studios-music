@@ -481,6 +481,18 @@ ul { list-style: none; }
   animation: float 3s ease-in-out infinite;
 }
 
+.play-btn {
+  box-shadow: 0 0 5px #ff006e;
+  transition: .4s;
+}
+
+.play-btn:hover {
+  box-shadow:
+    0 0 15px #ff006e,
+    0 0 30px #ff006e,
+    0 0 50px #ff006e;
+}
+
 @keyframes float {
   0% {
     transform: translateY(0);
