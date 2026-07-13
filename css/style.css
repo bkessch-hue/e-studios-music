@@ -466,7 +466,7 @@ ul { list-style: none; }
 }
 
 .album:hover {
-  transform: scale(1.08);
+  transform: scale(1.08) rotate(2deg);
 }
 
 /* ===== About ===== */
