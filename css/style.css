@@ -1,25 +1,25 @@
 /* ===== E-Studios Theme (Logo-derived colors) ===== */
 :root {
-  --primary: #ff006e;
-  --secondary: #8338ec;
-  --dark: #121212;
-  --light: white;
-  --brown-900: #1a1410;
-  --brown-800: #2a2018;
-  --brown-700: #3d3028;
-  --brown-600: #7a5540;
-  --brown-500: #b07050;
-  --brown-400: #c89070;
-  --brown-300: #d4a888;
-  --brown-200: #e4c8ac;
+  --primary: #b48265;
+  --secondary: #906050;
+  --dark: #202010;
+  --light: #e4d8cc;
+  --brown-900: #1a1714;
+  --brown-800: #303020;
+  --brown-700: #404040;
+  --brown-600: #505050;
+  --brown-500: #906050;
+  --brown-400: #b48265;
+  --brown-300: #c3b7ae;
+  --brown-200: #d8ccc0;
   --black: #000000;
-  --dark-card: #1a1714;
-  --dark-surface: #141210;
-  --gray-400: #9a9590;
-  --gray-300: #c8c2bc;
-  --white: #f5f0eb;
-  --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
-  --shadow: 0 4px 30px rgba(255,0,110,0.15);
+  --dark-card: #2a2518;
+  --dark-surface: #1a1714;
+  --gray-400: #808078;
+  --gray-300: #b0a898;
+  --white: #e4d8cc;
+  --gradient: linear-gradient(135deg, var(--primary), var(--brown-300));
+  --shadow: 0 4px 30px rgba(180,130,101,0.15);
   --radius: 12px;
 }
 
@@ -246,7 +246,7 @@ ul { list-style: none; }
 
 .btn-primary {
   background: var(--primary);
-  color: white;
+  color: #202010;
 }
 
 .btn-primary:hover {
@@ -263,7 +263,7 @@ ul { list-style: none; }
 .btn-secondary:hover {
   background: var(--secondary);
   border-color: var(--secondary);
-  color: white;
+  color: #e4d8cc;
   transform: scale(1.08);
 }
 
@@ -327,12 +327,12 @@ ul { list-style: none; }
 }
 
 h1 {
-  color: white;
+  color: #e4d8cc;
   text-shadow:
-    0 0 5px #ff00ff,
-    0 0 10px #ff00ff,
-    0 0 20px #ff00ff,
-    0 0 40px #ff00ff;
+    0 0 5px #b48265,
+    0 0 10px #b48265,
+    0 0 20px #906050,
+    0 0 40px #906050;
 }
 
 .section-header p {
@@ -504,15 +504,15 @@ h1 {
 }
 
 .play-btn {
-  box-shadow: 0 0 5px #ff006e;
+  box-shadow: 0 0 5px #b48265;
   transition: .4s;
 }
 
 .play-btn:hover {
   box-shadow:
-    0 0 15px #ff006e,
-    0 0 30px #ff006e,
-    0 0 50px #ff006e;
+    0 0 15px #b48265,
+    0 0 30px #b48265,
+    0 0 50px #b48265;
 }
 
 .record {
@@ -531,7 +531,7 @@ h1 {
 .bar {
   width: 8px;
   height: 30px;
-  background: #00ff99;
+  background: #b48265;
   animation: equalizer .7s infinite alternate;
 }
 
