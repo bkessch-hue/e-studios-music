@@ -469,6 +469,22 @@ ul { list-style: none; }
   transform: scale(1.08) rotate(2deg);
 }
 
+.player {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* ===== About ===== */
 .about-content {
   display: flex;
