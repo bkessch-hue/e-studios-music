@@ -210,31 +210,41 @@ ul { list-style: none; }
   align-items: center;
   gap: 8px;
   padding: 14px 32px;
-  border-radius: 50px;
+  border-radius: 8px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   border: none;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(176,112,80,0.3);
+  background: #8338ec;
+  transform: scale(1.08);
 }
 
 .btn-primary {
-  background: var(--gradient);
-  color: var(--white);
+  background: #ff006e;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #8338ec;
+  transform: scale(1.08);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--brown-400);
-  border: 2px solid var(--brown-500);
+  color: #ff006e;
+  border: 2px solid #ff006e;
 }
 
-.btn-secondary:hover { background: rgba(59,130,246,0.1); }
+.btn-secondary:hover {
+  background: #8338ec;
+  border-color: #8338ec;
+  color: white;
+  transform: scale(1.08);
+}
 
 /* Equalizer */
 .hero-visual {
@@ -445,9 +455,18 @@ ul { list-style: none; }
 .track-play svg { width: 20px; height: 20px; }
 
 .track-play:hover {
-  background: var(--brown-500);
+  background: #8338ec;
   color: var(--white);
   transform: scale(1.1);
+}
+
+.album {
+  width: 250px;
+  transition: transform .4s ease;
+}
+
+.album:hover {
+  transform: scale(1.08);
 }
 
 /* ===== About ===== */
