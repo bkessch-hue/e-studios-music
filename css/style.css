@@ -84,65 +84,6 @@ ul { list-style: none; }
   }
 }
 
-/* ===== Floating Music Notes & Microphones ===== */
-.music-bg {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.floating-el {
-  position: absolute;
-  animation: floatUp linear infinite;
-  opacity: 0;
-}
-
-/* Notes - warm terracotta */
-.floating-el:not(.mic) {
-  fill: rgba(180,130,101,0.12);
-}
-
-/* Microphones - slight pink tint */
-.mic {
-  fill: rgba(255,0,110,0.1);
-}
-
-/* Sizes and positions */
-.el-1  { width: 28px; left: 5%;  animation-duration: 16s; animation-delay: 0s; }
-.el-2  { width: 20px; left: 12%; animation-duration: 20s; animation-delay: 2s; }
-.el-3  { width: 32px; left: 22%; animation-duration: 18s; animation-delay: 4s; }
-.el-4  { width: 16px; left: 35%; animation-duration: 22s; animation-delay: 1s; }
-.el-5  { width: 24px; left: 45%; animation-duration: 17s; animation-delay: 3s; }
-.el-6  { width: 30px; left: 55%; animation-duration: 19s; animation-delay: 0.5s; }
-.el-7  { width: 22px; left: 65%; animation-duration: 21s; animation-delay: 5s; }
-.el-8  { width: 34px; left: 75%; animation-duration: 15s; animation-delay: 1.5s; }
-.el-9  { width: 18px; left: 82%; animation-duration: 23s; animation-delay: 3.5s; }
-.el-10 { width: 26px; left: 88%; animation-duration: 18s; animation-delay: 2.5s; }
-.el-11 { width: 20px; left: 92%; animation-duration: 20s; animation-delay: 0.8s; }
-.el-12 { width: 30px; left: 40%; animation-duration: 24s; animation-delay: 4.5s; }
-
-@keyframes floatUp {
-  0% {
-    transform: translateY(110vh) rotate(0deg) scale(0.8);
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.8;
-  }
-  95% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-10vh) rotate(360deg) scale(1.1);
-    opacity: 0;
-  }
-}
-
 /* ===== Navbar ===== */
 .navbar {
   position: fixed;
