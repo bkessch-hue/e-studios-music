@@ -650,14 +650,20 @@ h1 {
   justify-content: center;
   color: var(--brown-400);
   position: relative;
-  padding: 40px;
+  padding: 16px;
+  overflow: hidden;
 }
 
-.merch-image svg {
+.merch-image img {
   width: 100%;
   height: 100%;
-  max-width: 160px;
-  max-height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.4s ease;
+}
+
+.merch-card:hover .merch-image img {
+  transform: scale(1.05);
 }
 
 .merch-badge {
